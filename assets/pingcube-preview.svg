@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 310" width="820" height="310" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgDesktop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cubeGood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f703d"/>
+      <stop offset="100%" stop-color="#0a4726"/>
+    </linearGradient>
+    <linearGradient id="cubeOk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ad540a"/>
+      <stop offset="100%" stop-color="#703005"/>
+    </linearGradient>
+    <linearGradient id="cubeBad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ad1a1a"/>
+      <stop offset="100%" stop-color="#6b0d0d"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Outer container -->
+  <rect width="820" height="310" rx="16" fill="#0b0f17" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Left Panel: Simulated macOS Desktop + Menu Bar + Floating Cube -->
+  <g transform="translate(18, 18)">
+    <rect width="460" height="274" rx="12" fill="url(#bgDesktop)" stroke="#334155" stroke-width="1"/>
+
+    <!-- macOS Top Menu Bar -->
+    <path d="M 0 12 Q 0 0 12 0 L 448 0 Q 460 0 460 12 L 460 30 L 0 30 Z" fill="#090d16" fill-opacity="0.78"/>
+    <line x1="0" y1="30" x2="460" y2="30" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1"/>
+
+    <circle cx="16" cy="15" r="4" fill="#ffffff" fill-opacity="0.85"/>
+    <text x="30" y="20" fill="#ffffff" font-size="12" font-weight="600" opacity="0.88">Terminal</text>
+    <text x="92" y="20" fill="#ffffff" font-size="12" opacity="0.65">Shell</text>
+    <text x="132" y="20" fill="#ffffff" font-size="12" opacity="0.65">Window</text>
+
+    <!-- Menu Bar Status Item Pill -->
+    <rect x="312" y="5" width="68" height="20" rx="5" fill="#ffffff" fill-opacity="0.16"/>
+    <circle cx="324" cy="15" r="4.5" fill="#4ade80"/>
+    <text x="334" y="19" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="600">18ms</text>
+    <text x="392" y="19" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" opacity="0.75">14:02</text>
+
+    <!-- Caption on Desktop -->
+    <text x="18" y="58" fill="#94a3b8" font-size="12">Always-on-top floating cube + macOS Menu Bar status item</text>
+    <text x="18" y="76" fill="#64748b" font-size="11.5">Click menu bar icon to hide/show • Drag cube anywhere on screen</text>
+
+    <!-- Floating 150x150 Cube (Bottom-Right of Desktop) -->
+    <g transform="translate(292, 108)" filter="url(#shadow)">
+      <rect width="150" height="150" rx="20" fill="url(#cubeGood)" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.2"/>
+
+      <!-- 1. Header -->
+      <circle cx="16" cy="19" r="3.5" fill="#4ade80"/>
+      <text x="24" y="23" fill="#ffffff" fill-opacity="0.9" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="600">8.8.8.8</text>
+      <rect x="98" y="10" width="40" height="17" rx="8.5" fill="#000000" fill-opacity="0.32"/>
+      <text x="118" y="22" fill="#ffffff" font-size="9.5" font-weight="800" text-anchor="middle">GOOD</text>
+
+      <!-- 2. Hero Center RTT + Jitter -->
+      <text x="68" y="68" fill="#ffffff" font-size="36" font-weight="900" text-anchor="middle">18</text>
+      <text x="103" y="68" fill="#ffffff" fill-opacity="0.82" font-size="13" font-weight="700">ms</text>
+      <text x="75" y="84" fill="#ffffff" fill-opacity="0.82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="600" text-anchor="middle">±3ms jitter</text>
+
+      <!-- 3. 25-Bar Sparkline -->
+      <g transform="translate(12, 96)">
+        <!-- 25 bars (width=3.6, gap=1.5) -->
+        <rect x="0"   y="11" width="3.6" height="13" rx="1.2" fill="#59f294"/>
+        <rect x="5.1" y="17" width="3.6" height="7"  rx="1.2" fill="#59f294"/>
+        <rect x="10.2" y="16" width="3.6" height="8" rx="1.2" fill="#59f294"/>
+        <rect x="15.3" y="14" width="3.6" height="10" rx="1.2" fill="#59f294"/>
+        <rect x="20.4" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="25.5" y="15" width="3.6" height="9" rx="1.2" fill="#59f294"/>
+        <rect x="30.6" y="18" width="3.6" height="6" rx="1.2" fill="#59f294"/>
+        <!-- 64ms orange spike -->
+        <rect x="35.7" y="4"  width="3.6" height="20" rx="1.2" fill="#ffb838"/>
+        <rect x="40.8" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="45.9" y="18" width="3.6" height="6" rx="1.2" fill="#59f294"/>
+        <!-- 58ms & 43ms orange spikes -->
+        <rect x="51.0" y="6"  width="3.6" height="18" rx="1.2" fill="#ffb838"/>
+        <rect x="56.1" y="10" width="3.6" height="14" rx="1.2" fill="#ffb838"/>
+        <rect x="61.2" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="66.3" y="16" width="3.6" height="8" rx="1.2" fill="#59f294"/>
+        <rect x="71.4" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="76.5" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="81.6" y="15" width="3.6" height="9" rx="1.2" fill="#59f294"/>
+        <rect x="86.7" y="16" width="3.6" height="8" rx="1.2" fill="#59f294"/>
+        <rect x="91.8" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="96.9" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="102.0" y="16" width="3.6" height="8" rx="1.2" fill="#59f294"/>
+        <rect x="107.1" y="18" width="3.6" height="6" rx="1.2" fill="#59f294"/>
+        <rect x="112.2" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="117.3" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+        <rect x="122.4" y="17" width="3.6" height="7" rx="1.2" fill="#59f294"/>
+      </g>
+
+      <!-- 4. Rolling 60s Footer -->
+      <text x="12" y="138" fill="#ffffff" fill-opacity="0.88" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="600">L:0%</text>
+      <text x="75" y="138" fill="#ffffff" fill-opacity="0.88" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="600" text-anchor="middle">Avg:21</text>
+      <text x="138" y="138" fill="#ffffff" fill-opacity="0.88" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" font-weight="600" text-anchor="end">▲64</text>
+    </g>
+  </g>
+
+  <!-- Right Panel: 3 Automatic Health Color States -->
+  <g transform="translate(496, 18)">
+    <text x="2" y="16" fill="#94a3b8" font-size="12" font-weight="600">3 Automatic Color States:</text>
+
+    <!-- Card 1: GOOD -->
+    <g transform="translate(0, 28)">
+      <rect width="306" height="74" rx="12" fill="url(#cubeGood)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="16" cy="22" r="4" fill="#4ade80"/>
+      <text x="26" y="26" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">8.8.8.8</text>
+      <rect x="82" y="13" width="44" height="18" rx="9" fill="#000000" fill-opacity="0.3"/>
+      <text x="104" y="25" fill="#ffffff" font-size="10" font-weight="800" text-anchor="middle">GOOD</text>
+      <text x="16" y="52" fill="#ffffff" fill-opacity="0.82" font-size="11.5">RTT &lt; 40 ms &amp; Jitter &lt; 15 ms</text>
+      <text x="290" y="34" fill="#ffffff" font-size="22" font-weight="900" text-anchor="end">18 <tspan font-size="12" font-weight="700" fill-opacity="0.8">ms</tspan></text>
+      <text x="290" y="54" fill="#ffffff" fill-opacity="0.85" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" text-anchor="end">±3ms • L:0%</text>
+    </g>
+
+    <!-- Card 2: OK-ISH -->
+    <g transform="translate(0, 114)">
+      <rect width="306" height="74" rx="12" fill="url(#cubeOk)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="16" cy="22" r="4" fill="#fcd34d"/>
+      <text x="26" y="26" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">8.8.8.8</text>
+      <rect x="82" y="13" width="50" height="18" rx="9" fill="#000000" fill-opacity="0.3"/>
+      <text x="107" y="25" fill="#ffffff" font-size="10" font-weight="800" text-anchor="middle">OK-ISH</text>
+      <text x="16" y="52" fill="#ffffff" fill-opacity="0.82" font-size="11.5">RTT 40–100 ms or Jitter ≥ 15 ms</text>
+      <text x="290" y="34" fill="#ffffff" font-size="22" font-weight="900" text-anchor="end">64 <tspan font-size="12" font-weight="700" fill-opacity="0.8">ms</tspan></text>
+      <text x="290" y="54" fill="#fde68a" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" text-anchor="end">±18ms • ▲64</text>
+    </g>
+
+    <!-- Card 3: BAD -->
+    <g transform="translate(0, 200)">
+      <rect width="306" height="74" rx="12" fill="url(#cubeBad)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="16" cy="22" r="4" fill="#fca5a5"/>
+      <text x="26" y="26" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">8.8.8.8</text>
+      <rect x="82" y="13" width="38" height="18" rx="9" fill="#000000" fill-opacity="0.3"/>
+      <text x="101" y="25" fill="#ffffff" font-size="10" font-weight="800" text-anchor="middle">BAD</text>
+      <text x="16" y="52" fill="#ffffff" fill-opacity="0.82" font-size="11.5">Timeout (red flash) or &gt; 100 ms</text>
+      <text x="290" y="34" fill="#ffffff" font-size="18" font-weight="900" text-anchor="end">TIMEOUT</text>
+      <text x="290" y="54" fill="#fecaca" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" text-anchor="end">L:4% • ▲64</text>
+    </g>
+  </g>
+</svg>

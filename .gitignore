@@ -1,0 +1,8 @@
+# Compiled binaries and macOS app bundle
+PingCube
+PingCube.app/
+
+# macOS & Python artifacts
+.DS_Store
+__pycache__/
+*.pyc
